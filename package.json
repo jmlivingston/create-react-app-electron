@@ -1,0 +1,48 @@
+{
+  "name": "create-react-app-electron",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/electron-starter.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "nf start -p 3000",
+    "start-react": "react-scripts start",
+    "start-electron": "electron .",
+    "build": "react-scripts build",
+    "build-electron": "electron-packager . create-react-app-electron --out=dist/osx --platform=darwin --arch=x64",
+    "test": "react-scripts test --env=jsdom"
+  },
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "2.0.2"
+  },
+  "devDependencies": {
+    "electron": "^3.0.2",
+    "electron-packager": "^12.1.2",
+    "foreman": "^3.0.1"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "eslintConfig": {
+    "extends": "./node_modules/eslint-config-react-app/index.js",
+    "rules": {
+      "no-console": 1,
+      "react/default-props-match-prop-types": 1,
+      "react/prop-types": 1,
+      "react/no-unused-prop-types": 1,
+      "react/sort-prop-types": 1
+    }
+  },
+  "prettier": {
+    "filepath": "src",
+    "jsxBracketSameLine": true,
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true
+  }
+}
